@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 
 
-with open('POST_themmoi.json') as f:
+with open('GET_laychungchi.json') as f:
   createData = json.load(f)
 
 time = []
@@ -15,16 +15,16 @@ mean = [np.mean(time)]*len(time)
 
 fig, ax = plt.subplots()
 
-time_line = ax.plot(time, label='Thời gian phản hồi')
+time_line = ax.plot(time, label='Thời gian xử lý')
 mean_line = ax.plot(mean, label='Trung bình', linestyle='--')
 
 plt.xlabel('Lần')
-plt.ylabel('Thời gian phản hồi')
+plt.ylabel('Thời gian xử lý')
 
 plt.axis([0,100,0,5])
 
 # plt.title(label='Visualize time response of 100 request')
-plt.text(25, -0.65, 'Biểu đồ biểu diễn thời gian phản hồi của 100 request', fontdict={'fontsize': 14})
+plt.text(20, -0.65, 'Biểu đồ thời gian xử lý khi thực hiện tác vụ Lấy chứng chỉ', fontdict={'fontsize': 14})
 
 legend = ax.legend(loc='upper right')
 

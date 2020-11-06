@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 ROOT_URL = "http://159.89.211.103/apps/api/dvcchungchidgdquandinh/"
-AUTHORIZATION = "eyJhbGciOiJIUzUxMiIsImlhdCI6MTYwNDU1NTE1NiwiZXhwIjoxNjA0NTU4NzU2fQ.eyJ1c2VybmFtZSI6InN0cmluZyJ9.MIiRFHwJsz-yFv8wqOD-dRceM2lj4WCpnSSXFr0whvxkYSiBOcrPwa9kNwwUhaOr5s2tiH22ZTxA2IQNZI4-PA"
+AUTHORIZATION = "eyJhbGciOiJIUzUxMiIsImlhdCI6MTYwNDU5MzE4OCwiZXhwIjoxNjA0NTk2Nzg4fQ.eyJ1c2VybmFtZSI6InN0cmluZyJ9.9LEmRHvt8K9M8gbAAz1k9o5VtlUGI0TTzRHKgcu18xqCX_cUgXli8kmifhC_FvBNARLvv8ef1Jb36QzeXt3wIA"
 
 CREATE_DATA = []
 
@@ -41,7 +41,7 @@ def post_chungchi():
     }
 
     files=[
-        ('ChungChi', open('/home/ducdm/Pictures/122953568_652145808817518_4137528532679010030_n.png','rb'))
+        ('ChungChi', open('C:/Users/dangm/Desktop/Monitor_v2/dvcchungchidgd/POST_user.json','rb'))
     ]
 
     response = requests.request("POST", url, headers=headers, data = data, files=files)

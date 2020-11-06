@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 ROOT_URL = "http://159.89.211.103/apps/api/dvcchungchidgdquandinh/"
-AUTHORIZATION = ""
+AUTHORIZATION = "eyJhbGciOiJIUzUxMiIsImlhdCI6MTYwNDU5MzE4OCwiZXhwIjoxNjA0NTk2Nzg4fQ.eyJ1c2VybmFtZSI6InN0cmluZyJ9.9LEmRHvt8K9M8gbAAz1k9o5VtlUGI0TTzRHKgcu18xqCX_cUgXli8kmifhC_FvBNARLvv8ef1Jb36QzeXt3wIA"
 
 GET_DATA = []
 

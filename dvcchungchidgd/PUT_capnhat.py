@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 ROOT_URL = "http://159.89.211.103/apps/api/dvcchungchidgdquandinh/"
-AUTHORIZATION = ""
+AUTHORIZATION = "eyJhbGciOiJIUzUxMiIsImlhdCI6MTYwNDU5MzE4OCwiZXhwIjoxNjA0NTk2Nzg4fQ.eyJ1c2VybmFtZSI6InN0cmluZyJ9.9LEmRHvt8K9M8gbAAz1k9o5VtlUGI0TTzRHKgcu18xqCX_cUgXli8kmifhC_FvBNARLvv8ef1Jb36QzeXt3wIA"
 
 UPDATE_DATA = []
 
@@ -21,21 +21,23 @@ def put_chungchi(id):
     url = ROOT_URL + "CapNhat"
 
     data = {
+        'ID': id,
         'NgayCoHieuLuc': get_random_string(10),
         'NgayHetHieuLuc': get_random_string(10),
-        'ChungChi': get_random_string(10),
         'ModifiedDate': get_random_string(10),
         'ModifiedBy': get_random_string(10)
     }
 
-    data['ID'] = id
+
+    files=[
+        ('ChungChi', open('C:/Users/dangm/Desktop/Monitor_v2/dvcchungchidgd/POST_user.json','rb'))
+    ]
 
     headers = {
         'Authorization': AUTHORIZATION,
-        'Content-Type': 'application/json'
     }
 
-    response = requests.request("PUT", url, headers=headers, data = json.dumps(data))
+    response = requests.request("PUT", url, headers=headers, data = data, files = files)
 
 
     if response.status_code == 200:
