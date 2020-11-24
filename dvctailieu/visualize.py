@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 
 
-with open('POST_authentication.json') as f:
+with open('GET_laytailieu.json') as f:
   createData = json.load(f)
 
 time = []
@@ -24,7 +24,7 @@ plt.ylabel('Thời gian xử lý')
 plt.axis([0,100,0,5])
 
 # plt.title(label='Visualize time response of 100 request')
-plt.text(25, -0.65, 'Biểu đồ thời gian xử lý khi thực hiện tác vụ Xác thực' , fontdict={'fontsize': 14})
+plt.text(25, -0.65, 'Biểu đồ thời gian xử lý khi thực hiện tác vụ Cập nhật tất cả' , fontdict={'fontsize': 14})
 
 legend = ax.legend(loc='upper right')
 
